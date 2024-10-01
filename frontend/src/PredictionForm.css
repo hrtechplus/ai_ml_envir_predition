@@ -1,0 +1,97 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #eef5e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: linear-gradient(135deg, #77dd77, #a1f1a1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.container h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sensor-inputs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sensor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100px; /* Defines the basis size for each sensor element */
+  margin: 10px;
+}
+
+.sensor label {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.sensor-value {
+  font-size: 24px;
+  color: #444;
+}
+
+.prediction-result h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.prediction-box {
+  margin-top: 10px;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-box.good {
+  background-color: #82d16f;
+}
+
+.prediction-box.bad {
+  background-color: #ff5f5f;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+  .sensor-inputs {
+    display: block; /* Stack the inputs vertically */
+  }
+
+  .sensor {
+    width: 100%; /* Make each sensor take full width */
+    margin-bottom: 15px;
+  }
+
+  .prediction-box {
+    width: 80%; /* Adjust the prediction box width on small screens */
+  }
+}
